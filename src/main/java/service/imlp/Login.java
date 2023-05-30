@@ -4,14 +4,11 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
-import com.sun.jersey.api.representation.Form;
 import constant.ConstantVariable;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import model.User;
 import org.json.simple.JSONObject;
-import org.junit.Test;
 import service.ILogin;
 
 import java.util.logging.Logger;
@@ -35,7 +32,7 @@ public class Login implements ILogin {
                 formParam("username", user.getUsername()).
                 formParam("password", user.getPassword()).
                 when().
-                post(ConstantVariable.ENDPOINT_KEYLOACK_QC + "/auth/realms/demo/protocol/openid-connect/token").
+                post(ConstantVariable.ENDPOINT_KEYCLOAK_QC + "/auth/realms/demo/protocol/openid-connect/token").
                 then().
                 statusCode(200).log().all().
                 extract().response();
@@ -51,7 +48,21 @@ public class Login implements ILogin {
         Response response = given().
                 header("Authorization", "Bearer " + user.getToken()).
                 when().
-                get(ConstantVariable.ENDPOINT_KEYLOACK_QC + "/auth/realms/demo/otp-service/sendSmsOtp").
+                get(ConstantVariable.ENDPOINT_KEYCLOAK_QC + "/auth/realms/demo/otp-service/sendSmsOtp").
+                then().
+                statusCode(200).log().all().
+                extract().response();
+    }
+
+    @Override
+    public void validateSmsOTP(User user, String sms) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("otp",sms);
+        Response response = given().
+                header("Authorization", "Bearer " + user.getToken()).
+                body(jsonObject).
+                when().
+                post(ConstantVariable.ENDPOINT_KEYCLOAK_QC + "/auth/realms/demo/otp-service/validateOtp").
                 then().
                 statusCode(200).log().all().
                 extract().response();
