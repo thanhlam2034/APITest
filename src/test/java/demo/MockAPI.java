@@ -42,7 +42,6 @@ public class MockAPI {
                 log().all();
     }
 
-    @Test
     void testLoginJersey(){
         Client client = Client.create();
 

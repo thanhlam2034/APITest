@@ -1,115 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-26T16:32:11 ICT" name="Gradle suite" finished-at="2023-05-26T16:32:12 ICT" duration-ms="135">
+  <suite started-at="2023-05-30T10:35:07 ICT" name="Gradle suite" finished-at="2023-05-30T10:35:12 ICT" duration-ms="4495">
     <groups>
     </groups>
-    <test started-at="2023-05-26T16:32:11 ICT" name="Gradle test" finished-at="2023-05-26T16:32:12 ICT" duration-ms="135">
+    <test started-at="2023-05-30T10:35:07 ICT" name="Gradle test" finished-at="2023-05-30T10:35:12 ICT" duration-ms="4495">
       <class name="demo.MockAPI">
-        <test-method signature="testLoginJersey()[pri:0, instance:demo.MockAPI@25f4878b]" started-at="2023-05-26T16:32:11 ICT" name="testLoginJersey" finished-at="2023-05-26T16:32:12 ICT" duration-ms="97" status="FAIL">
-          <exception class="com.sun.jersey.api.client.ClientHandlerException">
-            <message>
-              <![CDATA[java.net.ConnectException: Connection refused: connect]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
-at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:155)
-at com.sun.jersey.api.client.Client.handle(Client.java:652)
-at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
-at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
-at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
-at demo.MockAPI.testLoginJersey(MockAPI.java:59)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-Caused by: java.net.ConnectException: Connection refused: connect
-at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
-at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
-at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
-at java.base/java.net.Socket.connect(Socket.java:608)
-at java.base/java.net.Socket.connect(Socket.java:557)
-at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182)
-at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:508)
-at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
-at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:276)
-at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:375)
-at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:396)
-at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
-at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
-at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
-at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
-at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1367)
-at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1342)
-at com.sun.jersey.client.urlconnection.URLConnectionClientHandler$1$1.getOutputStream(URLConnectionClientHandler.java:238)
-at com.sun.jersey.api.client.CommittingOutputStream.commitStream(CommittingOutputStream.java:117)
-at com.sun.jersey.api.client.CommittingOutputStream.write(CommittingOutputStream.java:89)
-at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:233)
-at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:312)
-at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:316)
-at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:153)
-at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:251)
-at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:257)
-at com.sun.jersey.core.util.ReaderWriter.writeToAsString(ReaderWriter.java:191)
-at com.sun.jersey.core.provider.AbstractMessageReaderWriterProvider.writeToAsString(AbstractMessageReaderWriterProvider.java:128)
-at com.sun.jersey.core.impl.provider.entity.StringProvider.writeTo(StringProvider.java:88)
-at com.sun.jersey.core.impl.provider.entity.StringProvider.writeTo(StringProvider.java:58)
-at com.sun.jersey.api.client.RequestWriter.writeRequestEntity(RequestWriter.java:300)
-at com.sun.jersey.client.urlconnection.URLConnectionClientHandler._invoke(URLConnectionClientHandler.java:217)
-at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:153)
-... 51 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- com.sun.jersey.api.client.ClientHandlerException -->
+        <test-method signature="Test_1()[pri:0, instance:demo.MockAPI@488d1cd7]" started-at="2023-05-30T10:35:10 ICT" name="Test_1" finished-at="2023-05-30T10:35:10 ICT" duration-ms="72" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginJersey -->
+        </test-method> <!-- Test_1 -->
+        <test-method signature="Test_2_POST()[pri:0, instance:demo.MockAPI@488d1cd7]" started-at="2023-05-30T10:35:10 ICT" name="Test_2_POST" finished-at="2023-05-30T10:35:10 ICT" duration-ms="71" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_2_POST -->
       </class> <!-- demo.MockAPI -->
+      <class name="demo.APITests">
+        <test-method signature="test1()[pri:0, instance:demo.APITests@20f5281c]" started-at="2023-05-30T10:35:07 ICT" name="test1" finished-at="2023-05-30T10:35:09 ICT" duration-ms="1249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test2()[pri:0, instance:demo.APITests@20f5281c]" started-at="2023-05-30T10:35:09 ICT" name="test2" finished-at="2023-05-30T10:35:09 ICT" duration-ms="684" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test2 -->
+      </class> <!-- demo.APITests -->
+      <class name="demo.TestPOST">
+        <test-method signature="Test_1()[pri:0, instance:demo.TestPOST@3d246ea3]" started-at="2023-05-30T10:35:10 ICT" name="Test_1" finished-at="2023-05-30T10:35:10 ICT" duration-ms="487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_1 -->
+        <test-method signature="Test_2_Put()[pri:0, instance:demo.TestPOST@3d246ea3]" started-at="2023-05-30T10:35:10 ICT" name="Test_2_Put" finished-at="2023-05-30T10:35:11 ICT" duration-ms="467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_2_Put -->
+        <test-method signature="Test_3_Patch()[pri:0, instance:demo.TestPOST@3d246ea3]" started-at="2023-05-30T10:35:11 ICT" name="Test_3_Patch" finished-at="2023-05-30T10:35:11 ICT" duration-ms="464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_3_Patch -->
+        <test-method signature="Test_4_Delete()[pri:0, instance:demo.TestPOST@3d246ea3]" started-at="2023-05-30T10:35:11 ICT" name="Test_4_Delete" finished-at="2023-05-30T10:35:12 ICT" duration-ms="449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_4_Delete -->
+      </class> <!-- demo.TestPOST -->
+      <class name="demo.LoginTest">
+        <test-method signature="testLogin()[pri:0, instance:demo.LoginTest@56c4278e]" started-at="2023-05-30T10:35:09 ICT" name="testLogin" finished-at="2023-05-30T10:35:10 ICT" duration-ms="363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+      </class> <!-- demo.LoginTest -->
+      <class name="demo.TestGET">
+        <test-method signature="Test_1()[pri:0, instance:demo.TestGET@301eda63]" started-at="2023-05-30T10:35:10 ICT" name="Test_1" finished-at="2023-05-30T10:35:10 ICT" duration-ms="142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_1 -->
+      </class> <!-- demo.TestGET -->
     </test> <!-- Gradle test -->
   </suite> <!-- Gradle suite -->
 </testng-results>

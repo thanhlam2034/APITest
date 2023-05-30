@@ -9,56 +9,19 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Gradle suite</th></tr>
-<tr><td><a href="#t0">Gradle test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">135</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Gradle test</a></td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4,495</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Gradle suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Gradle test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">demo.MockAPI</td><td><a href="#m0">testLoginJersey</a></td><td rowspan="1">1685093531973</td><td rowspan="1">97</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Gradle suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Gradle test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">demo.APITests</td><td><a href="#m0">test1</a></td><td rowspan="1">1685417707901</td><td rowspan="1">1249</td></tr><tr class="passedeven"><td><a href="#m1">test2</a></td><td rowspan="1">1685417709152</td><td rowspan="1">684</td></tr><tr class="passedodd"><td rowspan="1">demo.LoginTest</td><td><a href="#m2">testLogin</a></td><td rowspan="1">1685417709838</td><td rowspan="1">363</td></tr><tr class="passedeven"><td rowspan="2">demo.MockAPI</td><td><a href="#m3">Test_1</a></td><td rowspan="1">1685417710202</td><td rowspan="1">72</td></tr><tr class="passedeven"><td><a href="#m4">Test_2_POST</a></td><td rowspan="1">1685417710275</td><td rowspan="1">71</td></tr><tr class="passedodd"><td rowspan="1">demo.TestGET</td><td><a href="#m5">Test_1</a></td><td rowspan="1">1685417710347</td><td rowspan="1">142</td></tr><tr class="passedeven"><td rowspan="4">demo.TestPOST</td><td><a href="#m6">Test_1</a></td><td rowspan="1">1685417710489</td><td rowspan="1">487</td></tr><tr class="passedeven"><td><a href="#m7">Test_2_Put</a></td><td rowspan="1">1685417710977</td><td rowspan="1">467</td></tr><tr class="passedeven"><td><a href="#m8">Test_3_Patch</a></td><td rowspan="1">1685417711445</td><td rowspan="1">464</td></tr><tr class="passedeven"><td><a href="#m9">Test_4_Delete</a></td><td rowspan="1">1685417711909</td><td rowspan="1">449</td></tr></tbody>
 </table>
-<h2>Gradle test</h2><h3 id="m0">demo.MockAPI#testLoginJersey</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">com.sun.jersey.api.client.ClientHandlerException: java.net.ConnectException: Connection refused: connect
-	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:155)
-	at com.sun.jersey.api.client.Client.handle(Client.java:652)
-	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682)
-	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74)
-	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570)
-	at demo.MockAPI.testLoginJersey(MockAPI.java:59)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-Caused by: java.net.ConnectException: Connection refused: connect
-	at java.base/java.net.PlainSocketImpl.connect0(Native Method)
-	at java.base/java.net.PlainSocketImpl.socketConnect(PlainSocketImpl.java:101)
-	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
-	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
-	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
-	at java.base/java.net.Socket.connect(Socket.java:608)
-	at java.base/java.net.Socket.connect(Socket.java:557)
-	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:182)
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:508)
-	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:603)
-	at java.base/sun.net.www.http.HttpClient.&lt;init&gt;(HttpClient.java:276)
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:375)
-	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:396)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1367)
-	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1342)
-	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler$1$1.getOutputStream(URLConnectionClientHandler.java:238)
-	at com.sun.jersey.api.client.CommittingOutputStream.commitStream(CommittingOutputStream.java:117)
-	at com.sun.jersey.api.client.CommittingOutputStream.write(CommittingOutputStream.java:89)
-	at java.base/sun.nio.cs.StreamEncoder.writeBytes(StreamEncoder.java:233)
-	at java.base/sun.nio.cs.StreamEncoder.implFlushBuffer(StreamEncoder.java:312)
-	at java.base/sun.nio.cs.StreamEncoder.implFlush(StreamEncoder.java:316)
-	at java.base/sun.nio.cs.StreamEncoder.flush(StreamEncoder.java:153)
-	at java.base/java.io.OutputStreamWriter.flush(OutputStreamWriter.java:251)
-	at java.base/java.io.BufferedWriter.flush(BufferedWriter.java:257)
-	at com.sun.jersey.core.util.ReaderWriter.writeToAsString(ReaderWriter.java:191)
-	at com.sun.jersey.core.provider.AbstractMessageReaderWriterProvider.writeToAsString(AbstractMessageReaderWriterProvider.java:128)
-	at com.sun.jersey.core.impl.provider.entity.StringProvider.writeTo(StringProvider.java:88)
-	at com.sun.jersey.core.impl.provider.entity.StringProvider.writeTo(StringProvider.java:58)
-	at com.sun.jersey.api.client.RequestWriter.writeRequestEntity(RequestWriter.java:300)
-	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler._invoke(URLConnectionClientHandler.java:217)
-	at com.sun.jersey.client.urlconnection.URLConnectionClientHandler.handle(URLConnectionClientHandler.java:153)
-	... 51 more
-... Removed 44 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Gradle test</h2><h3 id="m0">demo.APITests#test1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">demo.APITests#test2</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">demo.LoginTest#testLogin</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">demo.MockAPI#Test_1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">demo.MockAPI#Test_2_POST</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">demo.TestGET#Test_1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">demo.TestPOST#Test_1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">demo.TestPOST#Test_2_Put</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">demo.TestPOST#Test_3_Patch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">demo.TestPOST#Test_4_Delete</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

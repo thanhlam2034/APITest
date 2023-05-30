@@ -1,5 +1,9 @@
 package service;
 
+import model.User;
+
 public interface ILogin {
-    void loginByPhone();
+    void loginVietCap(User user);
+
+    void sendSmsOTP(User user);
 }
