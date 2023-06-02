@@ -16,12 +16,6 @@ import java.util.logging.Logger;
 import static io.restassured.RestAssured.*;
 
 public class Login implements ILogin {
-
-
-        User userLamNguyen = User.builder().username("068C678543").password("abc123").build();
-
-
-
     @Override
     public void loginVietCap(User user){
         Response response = given().
@@ -32,7 +26,7 @@ public class Login implements ILogin {
                 formParam("username", user.getUsername()).
                 formParam("password", user.getPassword()).
                 when().
-                post(ConstantVariable.ENDPOINT_KEYCLOAK_QC + "/auth/realms/demo/protocol/openid-connect/token").
+                post(System.getenv("ENDPOINT_KEYCLOAK_QC") + "/auth/realms/demo/protocol/openid-connect/token").
                 then().
                 statusCode(200).log().all().
                 extract().response();
@@ -48,7 +42,7 @@ public class Login implements ILogin {
         Response response = given().
                 header("Authorization", "Bearer " + user.getToken()).
                 when().
-                get(ConstantVariable.ENDPOINT_KEYCLOAK_QC + "/auth/realms/demo/otp-service/sendSmsOtp").
+                get(System.getenv("ENDPOINT_KEYCLOAK_QC") + "/auth/realms/demo/otp-service/sendSmsOtp").
                 then().
                 statusCode(200).log().all().
                 extract().response();
@@ -62,7 +56,7 @@ public class Login implements ILogin {
                 header("Authorization", "Bearer " + user.getToken()).
                 body(jsonObject).
                 when().
-                post(ConstantVariable.ENDPOINT_KEYCLOAK_QC + "/auth/realms/demo/otp-service/validateOtp").
+                post(System.getenv("ENDPOINT_KEYCLOAK_QC") + "/auth/realms/demo/otp-service/validateOtp").
                 then().
                 statusCode(200).log().all().
                 extract().response();
