@@ -1,2 +1,5 @@
-package service;public interface ILoginRestTemplate {
+package service;
+
+public interface ILoginRestTemplate {
+    void loginByNumber();
 }

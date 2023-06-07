@@ -1,9 +1,5 @@
 package demo;
 
-import com.sun.jersey.api.client.Client;
-import com.sun.jersey.api.client.ClientResponse;
-import com.sun.jersey.api.client.WebResource;
-import com.sun.jersey.api.representation.Form;
 import io.restassured.http.ContentType;
 import org.json.simple.JSONObject;
 import org.testng.annotations.Test;
@@ -40,32 +36,6 @@ public class MockAPI {
                 then().
                 statusCode(201).
                 log().all();
-    }
-
-    void testLoginJersey(){
-        Client client = Client.create();
-
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("firstname", "Lam3");
-        jsonObject.put("lastname", "Nguyen3");
-        jsonObject.put("subjectId", 1);
-
-        WebResource webResource = client.resource("http://localhost:3000");
-
-        ClientResponse response = webResource.path("/users")
-                .accept("application/json")
-                .header("Content-Type","application/json")
-                .post(ClientResponse.class, jsonObject.toJSONString());
-
-        if (response.getStatus() == 200) {
-            String responseBody = response.getEntity(String.class);
-            System.out.println(response.getStatus());
-            System.out.println(responseBody);
-        } else {
-
-        }
-        System.out.println(response.getStatus());
-
     }
 
 }
